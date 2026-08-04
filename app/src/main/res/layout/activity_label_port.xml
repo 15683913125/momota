@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/primary"
+        app:navigationIcon="@drawable/ic_back"
+        app:titleTextColor="@color/white" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabIndicatorColor="@color/primary"
+        app:tabSelectedTextColor="@color/primary"
+        app:tabTextColor="#666666" />
+
+    <FrameLayout
+        android:id="@+id/tab_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- 手动输入视图 -->
+                <LinearLayout
+                    android:id="@+id/layout_manual"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint_tag"
+                        app:boxStrokeColor="@color/primary">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edit_tag"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:hint="@string/hint_port"
+                        app:boxStrokeColor="@color/primary">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edit_port"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textMultiLine"
+                            android:maxLines="3" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <!-- 粘贴消息视图 -->
+                <LinearLayout
+                    android:id="@+id/layout_paste"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint_paste_msg"
+                        app:boxStrokeColor="@color/primary">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edit_paste"
+                            android:layout_width="match_parent"
+                            android:layout_height="220dp"
+                            android:gravity="top|start"
+                            android:inputType="textMultiLine"
+                            android:textIsSelectable="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_generate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/btn_generate"
+                    app:backgroundTint="@color/primary"
+                    app:cornerRadius="12dp" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card_preview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="12dp">
+
+                        <ImageView
+                            android:id="@+id/img_preview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:contentDescription="@string/msg_success"
+                            android:scaleType="fitCenter" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_save"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="@string/btn_save"
+                            app:backgroundTint="@color/accent"
+                            app:cornerRadius="12dp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+</LinearLayout>

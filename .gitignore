@@ -1,0 +1,15 @@
+*.iml
+.gradle
+/local.properties
+/.idea
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+/app/build
+
+# 构建日志和旧压缩包，不上传
+build_log*.txt
+app-debug.rar
