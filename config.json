@@ -3,7 +3,7 @@
   "latestVersionName": "1.1",
   "forceUpdate": true,
   "updateMessage": "1",
-  "maintenance": false,
+  "maintenance": true,
   "maintenanceMessage": "软件维护中，请稍后再来",
   "announcement": "欢迎使用图片生成器，如有问题请联系管理员。",
   "downloadUrl": "https://github.com/15683913125/momota/raw/main/app-debug.apk"
