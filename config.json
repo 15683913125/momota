@@ -1,8 +1,8 @@
 {
   "latestVersionCode": 2,
   "latestVersionName": "1.1",
-  "forceUpdate": true,
-  "updateMessage": "更新说明：\n1. 修复远程停用不生效的问题，改用 GitHub Raw 直连，修改配置立即生效\n2. 新增双 URL 容灾机制，主用 GitHub Raw 失败时自动回退 CDN\n3. 优化启动验证页交互",
+  "forceUpdate": false,
+  "updateMessage": "",
   "maintenance": false,
   "maintenanceMessage": "软件维护中，请稍后再来",
   "announcement": "欢迎使用图片生成器，如有问题请联系管理员。",
