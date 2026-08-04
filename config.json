@@ -1,7 +1,7 @@
 {
-  "latestVersionCode": 2,
-  "latestVersionName": "1.1",
-  "forceUpdate": true,
+  "latestVersionCode": 1,
+  "latestVersionName": "1.0",
+  "forceUpdate": false,
   "updateMessage": "1",
   "maintenance": true,
   "maintenanceMessage": "软件维护中，请稍后再来",
